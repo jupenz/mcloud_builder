@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Morphlabs | Cloud Builder Prototype</title>
+	<!--[if IE]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="icon" href="/morphlabs.ico">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>	
+<div id="main">
+
+	<header id="header">
+		<h1 id="logo"> mCloud </h1>
+		<nav class="navigation">
+			<ul>
+				<li>
+					<a href="#" class="btn btn-rect combo-box-link icon-padding-right center">Menu <span class="icon-right icon-chevron-down border-left"></span></a>
+					<ul class="combo-box">
+						<li><a href="#" class="new">New Project</a></li>
+						<li><a href="#" class="open">Open Project</a></li>
+						<li><a href="#" class="save">Save / Save As</a></li>
+					</ul><!-- / -->
+				</li>
+				<li>
+					<a href="#" class="btn btn-rect">Auto Arrange</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="content">
+		<!-- Div Bunshins for dragging -->
+		<div class="compute-type compute-type-clone">
+			<a href="#" class="btn btn-round-small top-left"><span class="icon-center icon-plus"></span></a>
+			<span class="ct-name"></span>
+			<span class="ct-size"></span>
+		</div>
+		<div class="disk-volume disk-volume-clone">
+			<a href="#" class="btn btn-round-small top-left"><span class="icon-center icon-plus"></span></a>
+			<span class="dv-size"></span>
+		</div>
+
+		<aside class="compute-type-section">
+			<h1>Resources -</h1>
+			<section id="computes">
+				<h2>Computes</h2>
+					<div class="compute-types">
+						
+					</div>
+			</section>
+			<section id="volumes">
+				<h2>Disk Volumes</h2>
+					<div class="disk-volumes">
+							
+					</div>
+			</section>
+		</aside>
+
+		<div id="cb-stage">
+			
+		</div><!-- /Cloud Builder Stage -->
+
+	</div>
+
+</div><!-- main -->
+
+
+<!-- Javascripts -->
+<script src="/js/underscore.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/json2.js"></script>
+<script src="/js/backbone.js"></script>
+<script src="/js/raphael-min.js"></script>
+<script src="/js/cloud-builder-ui.js"></script>
+<script src="/js/cloud-builder.js"></script>
+<!-- Templates -->
+<script type="text/template" id="compute-type-template">
+	<span class="ct-name"><%= name %></span>
+	<span class="ct-size"><%= size %></span>
+</script>
+<script type="text/template" id="disk-volume-template">
+	<span class="dv-size"><%= size %></span>
+</script>
+
+</body>
+</html>

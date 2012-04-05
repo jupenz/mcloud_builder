@@ -1,0 +1,6 @@
+[{"type":"flex-image","size":"small","name":"CentOS"},
+{"type":"flex-image","size":"large","name":"Slackware"},
+{"type":"flex-image","size":"small","name":"Gentoo"},
+{"type":"flex-image","size":"medium","name":"Suse"},
+{"type":"flex-image","size":"large","name":"Fedora"},
+{"type":"flex-image","size":"small","name":"Ubuntu"}]
