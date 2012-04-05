@@ -1,38 +1,3 @@
-(function($){
-jQuery.fn.hitTestObject=function(target){
-	var src=$(this);
-	var x1=src.offset().left,y1=src.offset().top,w=src.outerWidth(),h=src.outerHeight();
-	var xp1=target.offset().left,yp1=target.offset().top,wp=target.outerWidth(),hp=target.outerHeight();
-	var x2=x1+w,y2=y1+h,xp2=xp1+wp,yp2=yp1+hp;
-	
-	if(xp1>=x1 && xp1<=x2 )
-	{
-		if(yp1>=y1 && yp1<=y2)
-		{
-			return true;
-		}
-		else if(y1>=yp1 && y1<=yp2)
-		{
-			return true;
-		}
-	}
-	else if(x1>=xp1 && x1<=xp2)
-	{
-		if(yp1>=y1 && yp1<=y2)
-		{
-			return true;
-		}
-		else if(y1>=yp1 && y1<=yp2)
-		{
-			return true;
-		}
-	}
-	return false;
-};//end of hit test
-
-
-})(jQuery);
-
 $(document).ready(function(){
 
 	// COMBO BOX SETUP
@@ -95,5 +60,38 @@ $(document).ready(function(){
 	  // TODO: save project and connections
 	});
 
-
 });
+
+
+(function($){
+jQuery.fn.hitTestObject=function(target){
+	var src=$(this);
+	var x1=src.offset().left,y1=src.offset().top,w=src.outerWidth(),h=src.outerHeight();
+	var xp1=target.offset().left,yp1=target.offset().top,wp=target.outerWidth(),hp=target.outerHeight();
+	var x2=x1+w,y2=y1+h,xp2=xp1+wp,yp2=yp1+hp;
+	
+	if(xp1>=x1 && xp1<=x2 )
+	{
+		if(yp1>=y1 && yp1<=y2)
+		{
+			return true;
+		}
+		else if(y1>=yp1 && y1<=yp2)
+		{
+			return true;
+		}
+	}
+	else if(x1>=xp1 && x1<=xp2)
+	{
+		if(yp1>=y1 && yp1<=y2)
+		{
+			return true;
+		}
+		else if(y1>=yp1 && y1<=yp2)
+		{
+			return true;
+		}
+	}
+	return false;
+};//end of hit test
+})(jQuery);
