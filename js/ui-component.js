@@ -38,9 +38,9 @@ $(document).ready(function(){
 	
 	});
 	
-
+	// STAGE RESIZE
 	var resizeStage = function(){
-		// Stage and SideNav Setup
+		
 		var _stage = $('div#cb-stage');
 		var _sideNav = $('aside.compute-type-section');
 		var offsetHeight = $('header#header').outerHeight(true) + 40;
@@ -57,7 +57,7 @@ $(document).ready(function(){
 	// TAB SETUP
 	
 	$("a.save").click(function(e){
-	  // TODO: save project and connections
+		// TODO: save project and connections
 	});
 
 });
